@@ -1,0 +1,74 @@
+
+/*
+*Min style för ramverk1
+*/
+
+
+
+body {
+     font-family: Georgia, "Times New Roman", Times, serif;
+     font-size: 90%;
+     margin:0px auto;
+     max-width: 950px;
+ }
+
+.main-wrap {
+    min-height: 400px;
+}
+.text-presentation, .bild-presentation {
+    display: inline-block;
+    vertical-align: top;
+}
+.text-presentation {
+    float: right;
+    width: 45%;
+    text-align: justify;
+
+}
+
+
+
+
+
+
+
+
+/**----------------------
+* footer
+*/
+
+
+a.more{font-size:0.8em; text-decoration:underline; color:#006F9A}
+.social{margin:10px 0 20px 0;}
+.social a{
+	opacity:0.5;
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+}
+.social a:hover{opacity:1;}
+.footer p{color:#565656;}
+footer{text-align:center;}
+.footer p:last-of-type{margin-bottom:0;}
+.copy{font-size:0.6em; margin:10px 0; color:#777; text-align:center;}
+.copy a{color:#B43641;}
+.footer{
+	font-size:0.8em;
+	}
+
+
+
+/*Gmiak*/
+
+.comment-border {
+    width: 98%;
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment-text {
+    margin-bottom: 20px;
+}

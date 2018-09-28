@@ -22,12 +22,17 @@ class App
      */
     public function renderPage($data, $status = 200)
     {
-        $data["stylesheets"] = ["css/style.css"];
+        //$data["stylesheets"] = ["css/style.css"];
+        $data["stylesheets"] = [
+            "css/style.css",
+            "css/w3.css",
+            "css/remserver.css"
+        ];
 
         // Add common header, navbar and footer
-        //$this->view->add("default1/header", [], "header");
+        $this->view->add("blocks/header", [], "header");
         //$this->view->add("default1/navbar", [], "navbar");
-        //$this->view->add("default1/footer", [], "footer");
+        $this->view->add("blocks/footer", [], "footer");
 
         // Add layout, render it, add to response and send.
         $this->view->add("default1/layout", $data, "layout");
