@@ -21,6 +21,15 @@ $app->router->setApp($app);
 
 // Configure session
 $app->session->configure("session.php");
+$app->session->start();
+
+// add comments
+$app->comment           = new \Anax\Comment\CommentSession();
+$app->commentController = new \Anax\Comment\CommentController();
+// Init comment
+$app->commentController->setApp($app);
+$app->comment->inject(["session" => $app->session]);
+
 
 // Configure url
 $app->url->setSiteUrl($app->request->getSiteUrl());
