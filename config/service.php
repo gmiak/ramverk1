@@ -30,6 +30,17 @@ $app->commentController = new \Anax\Comment\CommentController();
 $app->commentController->setApp($app);
 $app->comment->inject(["session" => $app->session]);
 
+// Add the REM server
+$app->rem           = new \Anax\RemServer\RemServer();
+$app->remController = new \Anax\RemServer\RemServerController();
+
+// Init REM Server
+$app->rem->configure("remserver.php");
+$app->rem->inject(["session" => $app->session]);
+
+// Init controller for the REM Server
+$app->remController->setApp($app);
+
 
 // Configure url
 $app->url->setSiteUrl($app->request->getSiteUrl());
